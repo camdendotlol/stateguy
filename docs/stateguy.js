@@ -1,1 +1,1 @@
-/home/camden/Documents/webdev/stateguy/stateguy.js
+../stateguy.js
