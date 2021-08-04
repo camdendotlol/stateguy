@@ -1,5 +1,7 @@
 # StateGuy
 
+![portrait of the state guy](https://raw.githubusercontent.com/mythmakerseven/stateguy/main/demo/favicon.png)
+
 A friendly guy who lives inside your browser and manages your state.
 
 by Camden Mecklem, 2021
