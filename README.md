@@ -1,6 +1,6 @@
 # StateGuy
 
-![portrait of the state guy](https://raw.githubusercontent.com/mythmakerseven/stateguy/main/demo/favicon.png)
+![portrait of the state guy](https://raw.githubusercontent.com/mythmakerseven/stateguy/main/docs/favicon.png)
 
 A friendly guy who lives inside your browser and manages your state.
 
