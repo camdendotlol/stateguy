@@ -1,4 +1,4 @@
-import stateguy from "./stateguy.js";
+import stateguy from "https://cdn.jsdelivr.net/npm/stateguy@0.0.1/stateguy.min.js";
 
 // Fill out state with default values
 stateguy.init({

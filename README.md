@@ -1,12 +1,17 @@
 # StateGuy
 
+[![npm version](https://badge.fury.io/js/stateguy.svg)](https://badge.fury.io/js/stateguy)
+[![](https://data.jsdelivr.com/v1/package/npm/stateguy/badge)](https://www.jsdelivr.com/package/npm/stateguy)
+
 ![portrait of the state guy](https://raw.githubusercontent.com/mythmakerseven/stateguy/main/docs/favicon.png)
 
-A friendly guy who lives inside your browser and manages your state.
+StateGuy lives inside your website and manages its global state.
 
 by Camden Mecklem, 2021
 
-released under MIT license
+released under [MIT license](https://github.com/mythmakerseven/stateguy/blob/main/LICENSE)
+
+available through [npm](https://www.npmjs.com/package/stateguy) and [jsDelivr](https://www.jsdelivr.com/package/npm/stateguy).
 
 ## What is StateGuy?
 
@@ -43,7 +48,7 @@ Other than that, I would prefer to tackle the design and code myself at this sta
 
 ### How did you come up with the name?
 
-"State Manager" => "stateman" => more friendlier => "stateguy"
+"State Manager" => "stateman" => make it friendlier => "stateguy"
 
 ### Will you support feature X in the future?
 

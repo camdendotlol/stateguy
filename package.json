@@ -1,6 +1,12 @@
 {
   "name": "stateguy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A minimalistic JS state management library",
-  "homepage": "https://mythmakerseven.github.io/stateguy/"
+  "homepage": "https://mythmakerseven.github.io/stateguy/",
+  "browser": "stateguy.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mythmakerseven/stateguy.git"
+  }
 }
