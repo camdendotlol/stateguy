@@ -12,8 +12,27 @@
     <img src="favicon.png" alt="">
     <h1>StateGuy</h1>
     <h2>a minimalist JavaScript state management library</h2>
-    <p>used by <span class="sg-population-stateguyUserCount red"></span> people worldwide</p>
-    <button id="bump-state">add a person</button>
+    <div id="nav">
+      <button id="home-button">Home</button>
+      <button id="stats-button">Stats</button>
+    </div>
+    <div id="content-tabs">
+      <div id="home-content">
+        <h1>Hello</h1>
+        <p>This is the homepage for StateGuy, a boring and un-innovative global state management library for simple webpages.</p>
+        <p>I don't know how useful it might be for serious web development, but it's a good place to start if you're interested in recreating parts of your favorite framework as a learning exercise, or if you're making a small personal site that uses limited bandwidth.</p>  
+      </div>
+      <div id="stats-content">
+        <h1>Stats</h1>
+        <h3>possibly fictional</h3>
+        <p>used by <span class="sg-population-stateguyUserCount red"></span> people worldwide</p>
+        <p>There are <span id="denmark-pop"></span> people in Denmark.</p>
+        <p>If every StateGuy user lived in Denmark, that would be <span class="sg-population-denmarkPopPercentage"></span>% of the Danish population!</p>
+        <button id="increment-pop">add a person</button>
+        <button id="decrement-pop">remove a person</button>
+        <p>made by <span class="sg-developer-name"></span>, who is currently working at <span class="sg-developer-job"></span></p>
+      </div>
+    </div>
   </div>
   <script type="module" src="script.js"></script>
 </body>

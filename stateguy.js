@@ -17,6 +17,10 @@ automatically update the element each time the state updates.
 // State is stored in a private object that is not directly accessible from outside stateguy.js.
 let state
 
+// Array of functions to run when state is updated
+// Registered with the watch() function
+const watchArray = []
+
 // Initialize a state object
 const init = (stateObject) => {
   if (state) {
@@ -33,12 +37,22 @@ const updateState = (name, payload) => {
   Object.keys(payload).forEach(key => {
     if (typeof payload[key] === 'object') {
       updateState(payload[key])
+    } else if (typeof payload[key] === 'function') {
+      updateState(payload[key]())
     } else {
       newState[key] = payload[key]
     }
   })
 
   state = { ...state, [name]: payload }
+
+  // update anything that's being watched
+  if (watchArray.length > 0) {
+    watchArray.forEach((callback) => {
+      callback()
+    })
+  }
+
   updateDOM()
 }
 
@@ -54,6 +68,13 @@ const fetch = (...properties) => {
   }
 
   return item
+}
+
+// Returns a function that is automatically run each time
+// updateState is called
+const watch = (...properties) => {
+  watchArray.push(() => fetch(...properties))
+  return watchArray[watchArray.length - 1]
 }
 
 // Accepts an object and overwrites anything in state that matches it
@@ -82,6 +103,7 @@ const updateDOM = () => {
     return fetch(...path)
   }
 
+  // Fetch all elements tagged with the stateguy class prefix
   const sgElements = document.querySelectorAll(`[class*=sg-`)
   sgElements.forEach(element => {
     return element.innerHTML = parseClassName(element.className)
@@ -91,5 +113,6 @@ const updateDOM = () => {
 export default {
   init,
   fetch,
+  watch,
   dispatch
 }
